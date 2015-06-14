@@ -1,0 +1,12 @@
+<div ng-controller="mainPageController">
+    <div>Welcome {{user.name}}! <button ng-submit="logout()">Logout</button></div>
+    <h2>Pick a Restaurant!</h2>
+    <div>
+        <select ng-change="test()" ng-model="restaurant" id='selected-restaurant'>
+        	<option value='taco-bell'>Taco Bell</option>
+        	<option value='arbys'>Arby's</option>
+        	<option value='mcdonalds'>McDonalds</option>
+        </select>
+    </div>
+    <div ng-route></div>
+</div>
