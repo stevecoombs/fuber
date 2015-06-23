@@ -15,7 +15,7 @@
 
 		<h2>Shopping Cart Example</h2>
 
-		<div ng:controller="tacoBellController">
+		<div ng-controller="tacoBellController">
 			<table class="table">
 				<tr>
 					<th>Description</th>
@@ -24,19 +24,19 @@
 					<th>Total</th>
 					<th></th>
 				</tr>
-				<tr ng:repeat="item in invoice.items">
-					<td><div type="text" ng:model="item.description"class="input-small"></div></td>           
-					<td><div type="number" ng:model="item.qty" ng:required class="input-mini"></div></td>
-					<td><div type="number" ng:model="item.cost" ng:required class="input-mini"></div></td>
+				<tr ng-repeat="item in invoice.items">
+					<td><div type="text" ng-model="item.description"></div></td>           
+					<td><div type="number" ng-model="item.qty"></div></td>
+					<td><div type="number" ng-model="item.cost"></div></td>
 					<td>{{item.qty * item.cost | currency}}</td>
 					<td>
-						[<a href ng:click="removeItem($index)">X</a>]
+						[<a href ng-click="removeItem($index)">X</a>]
 					</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>Total:</td>
-					<td>{{total() | currency}}</td>
+					<td>{{total}}</td>
 				</tr>
 			</table>
 		</div>

@@ -4,12 +4,12 @@ angular.module('fuber')
 	
 
 	mainService.getTBMenu().then(function(response){
-		$scope.menu = response.data.results
+		$scope.menu = response.data.results;
 	});	
 
 	$scope.invoice = {
 		items: [{
-			qty: 0, 
+			qty: '', 
 			description: '', 
 			cost: ''
 		}]
@@ -32,7 +32,7 @@ angular.module('fuber')
 		var total = 0;
 		angular.forEach($scope.invoice.items, function(items){
 			total += items.qty * items.cost;
-		})
+		});
 
 		return total;
 	};
