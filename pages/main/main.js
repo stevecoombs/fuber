@@ -4,13 +4,15 @@ angular.module('fuber')
     $scope.user = userService.getLoggedInUser();
 
     $scope.thisRestaurant = function(){  
+
         if($scope.restaurant === 'taco-bell'){
             $location.path('/tacobell')
         }
     }
 
     $scope.test = function(){
-        return $scope.thisRestaurant();
+        
+        $scope.thisRestaurant();
     }
 
     $scope.logout = function(){        

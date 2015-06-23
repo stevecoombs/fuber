@@ -1,4 +1,13 @@
-<div ng-controller="tacoBellController">
+<div ng-controller='tacoBellController' class='menuContainer'>
+	
 	<h1>Taco Bell Menu</h1>
-	<div type="text" ng-show="displayTBMenu" ng-model='showText'>{{menu}}</div>
+
+	<div type="text" ng-repeat='items in menu'>
+
+		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)">{{items.food_value_1}}</a>
+
+		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)">${{items.price_price}}</a>
+
+	</div>
+
 </div>	
