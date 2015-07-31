@@ -1,37 +1,29 @@
 angular.module('fuber')
 
-.controller('tacoBellController', function($scope, mainService){
+.controller('tacoBellController', function($scope, mainService, $timeout){
 	
 
 	mainService.getTBMenu().then(function(response){
 		$scope.menu = response.data.results;
 	});	
 
-	$scope.invoice = {
-		items: [{
-			qty: '', 
-			description: '', 
-			cost: ''
-		}]
-	};
-	console.log($scope.invoice)
+	$scope.items = [];
 
 	$scope.addItem = function(thing, price) {
-        $scope.invoice.items.push({
-            qty: 1,
+        $scope.items.push({
             description: thing,
             cost: price
         });
     },
 
 	$scope.removeItem = function(index){
-		$scope.invoice.items.splice(index, 1);
+		$scope.items.splice(index, 1);
 	},
 
 	$scope.total = function(){
 		var total = 0;
-		angular.forEach($scope.invoice.items, function(items){
-			total += items.qty * items.cost;
+		angular.forEach($scope.items, function(items){
+			total += items.cost;
 		});
 
 		return total;

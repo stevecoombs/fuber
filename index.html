@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="style.css">
 	<title>F'Uber</title>
 </head>
-<body>
+<body ng-controller="tacoBellController">
 	<div ng-cloak>
 		<h1>- F'Uber -</h1>
 		<h2>It's like Uber, but with Food Delivery!</h2>
@@ -13,36 +13,32 @@
 
 		<div class="menuContainer" ng-view></div>
 
-		<h2>Shopping Cart Example</h2>
+		<h2>Shopping Cart</h2>
 
-		<div ng-controller="tacoBellController">
+		<div >
+			<div ng-repeat='test in test'>{{test}}</div>
 			<table class="table">
 				<tr>
 					<th>Description</th>
-					<th>Qty</th>
 					<th>Cost</th>
-					<th>Total</th>
 					<th></th>
 				</tr>
-				<tr ng-repeat="item in invoice.items">
-					<td><div type="text" ng-model="item.description"></div></td>           
-					<td><div type="number" ng-model="item.qty"></div></td>
-					<td><div type="number" ng-model="item.cost"></div></td>
-					<td>{{item.qty * item.cost | currency}}</td>
+				<tr ng-repeat="item in items">
+					<td type="text">{{item.description}}</td> 
+					<td type="number">{{item.cost | currency}}</td>
 					<td>
-						[<a href ng-click="removeItem($index)">X</a>]
+						[<a ng-click="removeItem($index)">X</a>]
 					</td>
 				</tr>
 				<tr>
-					<td></td>
 					<td>Total:</td>
-					<td>{{total}}</td>
+					<td type="number">{{total() | currency}}</td>
+					<td><button ng-click="checkout()">Checkout</button></td>
 				</tr>
 			</table>
 		</div>
 
-		
-</div>
+	</div>
 	
 	
 

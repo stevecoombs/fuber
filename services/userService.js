@@ -15,7 +15,7 @@ app.service('userService', function($location, $firebaseAuth, fb){
     	var ref = new Firebase(fb.url);
     	var authObj = $firebaseAuth(ref);
     	ref.$unauth();
-    	$location.path('login')
+    	$location.path('/login')
     };
 
     this.loginWithGoogle = function(){
