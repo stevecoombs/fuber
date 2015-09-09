@@ -1,0 +1,13 @@
+<div>
+	
+	<h1>Arby's Menu</h1>
+
+	<div type="text" ng-repeat='items in menu'>
+
+		<a href ng-model="items" ng-click="addItem(items.food_value, items.price_price)">{{items.food_value}}</a>
+
+		<a href ng-model="items" ng-click="addItem(items.food_value, items.price_price)">${{items.price_price}}</a>
+
+	</div>
+
+</div>	

@@ -17,7 +17,13 @@ app.config(function($routeProvider){
             when('/tacobell', {
                 templateUrl: 'pages/restaurants/tacobell/tacobell.html'
             }).
+            when('/mcdonalds', {
+                templateUrl: 'pages/restaurants/mcdonalds/mcdonalds.html'
+            }).
+            when('/arbys', {
+                templateUrl: 'pages/restaurants/arbys/arbys.html'
+            }).
             otherwise({
-                redirectTo: '/login'
+                redirectTo: '/main'
             });
 });

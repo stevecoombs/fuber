@@ -8,10 +8,10 @@ angular.module('fuber')
         if($scope.restaurant === 'taco-bell'){
             $location.path('/tacobell')
         }
-        if($scope.restaurant === 'arbys'){
+        else if($scope.restaurant === 'arbys'){
             $location.path('/arbys')
         }
-        if($scope.restaurant === 'mcdonalds') {
+        else if($scope.restaurant === 'mcdonalds') {
             $location.path('/mcdonalds')
         }
     }
