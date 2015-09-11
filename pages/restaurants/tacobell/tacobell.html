@@ -1,12 +1,14 @@
-<div>
+<div class='taco-bell'>
 	
-	<h1>Taco Bell Menu</h1>
+	<div class='rest-logo'><img src='tacobell.png'></div>
+	<div class='rest-name'>
+		<h1>Taco Bell Menu</h1>
+	</div>
 
-	<div type="text" ng-repeat='items in menu'>
+	<div type="text" ng-repeat='items in menu' class='menu'>
 
-		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)">{{items.food_value_1}}</a>
-
-		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)">${{items.price_price}}</a>
+		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)" class='food'>{{items.food_value_1}}</a>...
+		<a href ng-model="items" ng-click="addItem(items.food_value_1, items.price_price)" class='money'>${{items.price_price}}</a>
 
 	</div>
 

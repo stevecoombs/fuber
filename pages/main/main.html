@@ -1,12 +1,14 @@
-<div ng-controller="mainPageController">
-    <div>Welcome {{user.name}}! <button ng-submit="logout()">Logout</button></div>
-    <h2>Pick a Restaurant!</h2>
-    <div>
+<div ng-controller="mainPageController" class='main-page'>
+    <div class='welcome'>Welcome {{user.name}}!</div>
+    <div class="pick">
+        <h2>Pick a Restaurant!</h2>
         <select ng-change="thisRestaurant()" ng-model="restaurant" id='selected-restaurant'>
         	<option value='taco-bell'>Taco Bell</option>
-        	<option value='arbys'>Arby's</option>
-        	<option value='mcdonalds'>McDonalds</option>
         </select>
     </div>
+    <div class='logo'><img src='fuberlogo2.png' height='200'></div>
+    <div></div>
+    <div></div>
+    <div></div>
     <div ng-route></div>
 </div>

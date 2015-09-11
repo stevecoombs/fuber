@@ -24,6 +24,6 @@ app.config(function($routeProvider){
                 templateUrl: 'pages/restaurants/arbys/arbys.html'
             }).
             otherwise({
-                redirectTo: '/main'
+                redirectTo: '/login'
             });
 });
