@@ -20,6 +20,7 @@ h1, h2{
 	bottom: 83%;
 	display: flex;
 	justify-content: space-around;
+	z-index: 1
 }
 
 
@@ -69,6 +70,11 @@ h1, h2{
 .description{
 	text-align: left;
 	text-decoration: underline;
+	width: 100%;
+}
+
+.blip{
+	text-align: left;
 }
 
 .cost{
@@ -144,6 +150,10 @@ h1, h2{
 	margin-left: 15px;
 }
 
+.remove{
+	cursor: pointer;
+}
+
 .button {
 	float: left;
 	min-width: 150px;
@@ -154,6 +164,7 @@ h1, h2{
 	border: none;
 	background: none;
 	color: white;
+	cursor: pointer;
 	vertical-align: middle;
 	position: relative;
 	bottom: 30%;

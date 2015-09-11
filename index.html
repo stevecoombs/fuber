@@ -34,10 +34,10 @@
 						<th></th>
 					</tr>
 					<tr ng-repeat="item in items">
-						<td type="text">--{{item.description}}</td> 
+						<td type="text" class="blip">--{{item.description}}</td> 
 						<td type="number">{{item.cost | currency}}</td>
 						<td>
-							[<a ng-click="removeItem($index)">X</a>]
+							[<a ng-click="removeItem($index)" class='remove'>X</a>]
 						</td>
 					</tr>
 				</table>
